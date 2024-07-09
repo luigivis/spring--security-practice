@@ -37,7 +37,7 @@ public class SwaggerConfig {
         var components = new Components();
         components.setSchemas(schemas());
 
-        Info info = new Info()
+        var info = new Info()
                 .title("Spring Security Web API")
                 .version(version)
                 .contact(contact)

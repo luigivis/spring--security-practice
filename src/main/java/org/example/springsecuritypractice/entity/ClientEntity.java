@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Helper;
+import lombok.experimental.Tolerate;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -19,6 +21,7 @@ import java.time.LocalDate;
         @Index(name = "client_phone_idx", columnList = "phone"),
         @Index(name = "client_email_idx", columnList = "email")
 })
+
 public class ClientEntity {
 
     @Id

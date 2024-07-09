@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
+
 public record ClientCreateDto(
         @NotBlank(message = "Name can't be null")
         @Size(max = 30, message = "Name contain more than 30 characters")
