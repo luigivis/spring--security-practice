@@ -33,4 +33,9 @@ public class ClientController {
         return this.clientService.findAllClient(PageRequest.of(page, size));
     }
 
+    @GetMapping("/search")
+    public HttpResponse<List<ClientEntity>> search(@RequestParam String keyword) {
+        return this.clientService.searchByAllRow(keyword);
+    }
+
 }

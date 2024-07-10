@@ -14,9 +14,10 @@ public class PageableToolsImpl {
         try {
             final var pageTuts = (Page<?>) repositoryValueObject;
 
+            //new ObjectMapper().registerModule(new JavaTimeModule()).writeValueAsString(repositoryValueObject)
             final var paginationDto = new PaginationDto(pageTuts.getContent(),
                     pageTuts.getNumber(),
-                    pageTuts.getTotalPages(),
+                    pageTuts.getTotalPages() - 1,
                     pageTuts.getTotalElements());
 
             return new HttpResponse<>(HttpStatus.OK, paginationDto);
