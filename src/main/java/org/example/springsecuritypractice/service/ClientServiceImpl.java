@@ -25,6 +25,7 @@ public class ClientServiceImpl {
 
     private final ClientRepository clientRepository;
 
+    @Autowired
     public ClientServiceImpl(ClientRepository clientRepository, ObjectMapper objectMapper) {
         this.clientRepository = clientRepository;
         this.objectMapper = objectMapper;
